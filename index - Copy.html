@@ -1,0 +1,62 @@
+.<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>EX: 4</title>
+
+    <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</head>
+<body>
+	<div class="container">
+
+        <h1>Currency Converter</h1>
+
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/36/PHP_100_obv_%28new%29.jpg/300px-PHP_100_obv_%28new%29.jpg">
+
+        <form>
+            <label> Enter a value:</label>
+                <input type="number" name="value-in-peso" id="peso-value">
+         </form>
+
+
+        <p id="currency">In order to convert P100 into other currencies, click on the buttons below.</p>
+
+        <button type="button" class="btn btn-danger" onClick="toUSD()">USD</button>
+        
+        <button type="button" class="btn btn-danger" onClick="toYEN()">YEN</button>
+
+        <button type="button"OnClick = "window.location.reload()">
+            REFRESH
+        </button>
+
+
+    <script type="text/javascript">
+        function toUSD() {
+          var php = document.getElementById('peso-value').value;
+          var usd = 58;
+          var peso_usd = php/usd;
+          var round_peso_usd = peso_usd.toFixed(2);
+
+          document.getElementById('currency').innerHTML = 'The converted value of P100 to USD is ' + 'USD ' + '<kdb>' + round_peso_usd + '</kdb>';
+        }
+
+        function toYEN() {
+          var php_yen = 100;
+          var yen = 60;
+          var peso_yen = php_yen/yen;
+          var round_peso_yen = peso_yen.toFixed(2);
+
+    document.getElementById('currency').innerHTML = 'The converted value of P100 to YEN is ' + 'YEN ' + '<kdb>' + round_peso_yen + '</kdb>' }
+
+      </script>
+
+
+    </div>
+</body>
+</html>
